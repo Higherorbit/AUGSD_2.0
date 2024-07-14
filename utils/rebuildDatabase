@@ -58,16 +58,31 @@ let dropCollections = function () {
 		return resolve();
 	});
 };
+/*
+# let createSuperUsers = function () {
+# 	return new Promise(function (resolve, reject) {
+# 		console.log("******** Creating SuperUsers ********");
+# 		adminsModel.create(data.superUsers, function (err, result) {
+# 			if (err) {
+# 				return reject(err);
+# 			}
+# 			return resolve();
+# 		});
+# 	});
+# };
+*/
 let createSuperUsers = function () {
-	return new Promise(function (resolve, reject) {
-		console.log("******** Creating SuperUsers ********");
-		adminsModel.create(data.superUsers, function (err, result) {
-			if (err) {
-				return reject(err);
-			}
-			return resolve();
-		});
-	});
+  return new Promise(function (resolve, reject) {
+    console.log("******** Creating SuperUsers ********");
+    adminsModel.create(data.superUsers, function (err, result) {
+      if (err) {
+        console.log("Error creating superusers:", err);
+        return reject(err); // Ensure errors are logged and the promise is rejected
+      }
+      console.log("Superusers created successfully");
+      return resolve(); // Ensure the promise is resolved
+    });
+  });
 };
 
 let createPortals = function () {
