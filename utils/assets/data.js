@@ -155,6 +155,16 @@ var portals = [
 
 var superUsers = [
   {
+    name: "Samandeep Singh",
+    email: "higherorbit2003@gmail.com",
+    portals: [],
+    home: "",
+    superUser: true,
+    department: "Timetable Division",
+    departmentCode: "ID",
+    maxProjects: 2
+  },
+  {
     name: "Sohail Rajdev",
     email: "sohailrajdev97@gmail.com",
     portals: [],
